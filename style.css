@@ -4,21 +4,33 @@
 }
 body{
     font-family: tahoma;
-    font-size: 24px
+    font-size: 24px;
+    background-color: #3D486C;
+    color: white;
+    text-align: center;
+}
+h3{
+    font-weight: 500;
+    color: #DFDFEF
 }
 h1{
     text-align: center;
-    padding-bottom: 3px
+    color: #DFDFEF
 }
 hr{
-    margin-bottom: 15px;
     height: 5px;
-    background: green;
+    background: #49BC9A;
+    color: green;
     border-radius: 5px;
+    width: 500px;
+    margin: 15px auto;
 }
 .container{
     margin: 15px;
     padding: 15px
+}
+.basic-shapes{
+    margin-bottom: 100px
 }
 .shapes{
 /*    margin-top: 20px;*/
@@ -26,17 +38,22 @@ hr{
     justify-content: space-around;
     flex-wrap: wrap;
     text-align: center;
+    background-color: #5D6C9E;
+    border-radius: 25px;
+    padding-top: 35px
+    
 }
 .box{
     width: 300px;
-
+    background-color: #445175;
     height: 250px;
 /*   
     display: flex;
     justify-content: center;
     align-items: center;
 */
-    border: 1px solid gray;
+    border-radius: 25px;
+/*    border: 1px solid gray;*/
     margin-bottom: 34px;
     transition: 0.5s all ease;
     
@@ -68,6 +85,44 @@ hr{
     border-radius: 50%;
     background-color: gray
 }
+.star{
+    width: 0;
+    height: 0;
+    margin: 65px auto;
+    position: relative;
+    display: block;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #fc2e5a;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+}
+.star::before{
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: block;
+    top: -45px;
+    left: -65px;
+    border-bottom: 80px solid #fc2e5a;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    transform: rotate(-35deg);
+}
+.star::after{
+    content: "";
+    width: 0; 
+    height: 0;
+    position: absolute;
+    display: block;
+    top: 3px ;
+    left: -105px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #fc2e5a;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg)
+}
+
 
 .trapezoid{
     width: 150px;
@@ -115,6 +170,99 @@ hr{
     border-bottom: 140px solid blue;
     transform: rotateZ(90deg);
 }
+.diamond{
+    width: 120px;
+    height: 120px;
+    background: #1eff00;
+    transform: rotate(-45deg);
+    margin:35px auto
+}
+
+
+/*Polygon shapes*/
+
+/*Pentagon shapes*/
+.pentagon{
+    margin: 80px auto;
+    width: 80px;
+    position: relative;
+    border-width: 64px 20px 0px;
+    border-style: solid;
+    border-color: #277BE7 transparent;
+}
+.pentagon::before{
+    content: "";
+    width: 0px;
+    height: 0;
+    position: absolute;
+    top: -118px;
+    left: -19px;
+    border-bottom: 54px solid #277BE7;
+    border-left: 59px solid transparent;
+    border-right: 59px solid transparent;
+}
+
+/*Hexagon shape*/
+.hexagon{
+    margin: 60px auto;
+    width: 120px;
+    height: 65px;
+    background-color:dodgerblue;
+    position: relative;
+}
+.hexagon::before{
+    content: "";
+    position: absolute;
+    top: -40px;
+    left:0 ;
+    border-right: 60px solid transparent;
+    border-bottom: 40px solid dodgerblue;
+    border-left: 60px solid transparent;
+}
+.hexagon::after{
+    content: "";
+    position: absolute;
+    top: 65px;
+    left:0 ;
+    border-right: 60px solid transparent;
+    border-top: 40px solid dodgerblue;
+    border-left: 60px solid transparent;
+}
+
+
+/*Octagon shape*/
+.octagon{
+    width: 120px;
+    height: 50px;
+    margin: 70px auto;
+    background-color: #ac60ec;
+    position: relative;
+
+}
+
+.octagon::before{
+    content: "";
+    width: 50px;
+    height: 0;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    border-bottom: 40px solid #ac60ec;
+    border-right: 35px solid transparent;
+    border-left: 35px solid transparent;
+}
+
+.octagon::after{
+    content: "";
+    width: 50px;
+    height: 0;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    border-top: 40px solid #ac60ec;
+    border-right: 35px solid transparent;
+    border-left: 35px solid transparent;
+}
 
 
 
@@ -124,16 +272,9 @@ hr{
 
 
 
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 425px){
+  
+}
 
 
 
