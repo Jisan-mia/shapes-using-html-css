@@ -10,8 +10,10 @@ body{
     text-align: center;
 }
 h3{
+    font-size: 25px;
     font-weight: 500;
-    color: #DFDFEF
+    color: #DFDFEF;
+    padding-top: 10px;
 }
 h1{
     text-align: center;
@@ -170,6 +172,31 @@ hr{
     border-bottom: 140px solid blue;
     transform: rotateZ(90deg);
 }
+
+.triangle-top-left, .triangle-top-right, .triangle-bottom-left, .triangle-bottom-right{
+    width: 0;
+    height: 0;
+    margin: 30px auto;
+}
+
+.triangle-top-left{
+    border-top: 140px solid red;
+    border-right: 140px solid transparent;
+}
+
+.triangle-top-right{
+    border-top: 140px solid green;
+    border-left: 140px solid transparent;
+}
+.triangle-bottom-left{
+    border-bottom: 140px solid rgba(150, 200, 45, 1);
+    border-right: 140px solid transparent;
+}
+.triangle-bottom-right{
+    border-bottom: 140px solid orange;
+    border-left: 140px solid transparent;
+}
+
 .diamond{
     width: 120px;
     height: 120px;
@@ -180,6 +207,9 @@ hr{
 
 
 /*Polygon shapes*/
+.polygon-shapes{
+    margin-bottom: 100px;
+}
 
 /*Pentagon shapes*/
 .pentagon{
@@ -228,6 +258,15 @@ hr{
     border-top: 40px solid dodgerblue;
     border-left: 60px solid transparent;
 }
+img{
+    width: 150px;
+    height: 150px;
+    margin: 15px auto;
+    background-color:brown;
+/*    border: 1px solid black;*/
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
 
 
 /*Octagon shape*/
@@ -264,6 +303,130 @@ hr{
     border-left: 35px solid transparent;
 }
 
+/*others shape*/
+.egg{
+    margin: 20px auto;
+    width: 116px;
+    height: 165px;
+    background-color: #ffc000;
+    display: block;
+/*    -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;*/
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+
+.pacman{
+    width: 0;
+    height: 0;
+    border-right: 70px solid transparent;
+    border-top: 70px solid #ffde00;
+    border-left: 70px solid #ffde00;
+    border-bottom: 70px solid #ffde00;
+    border-radius: 70px 70px 70px 70px;
+    margin: 25px auto;
+}
+
+.heart{
+    position: relative;
+    margin: 30px auto;
+    width: 100px;
+    height: 90px;
+}
+.heart::before,
+.heart::after{
+    position: absolute;
+    content: "";
+    left: 45px;
+    top: 0; 
+    width: 70px;
+    height: 100px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.heart::after{
+    left: -23px;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+.infinity{
+    position: relative;
+    width: 212px;
+    height: 100px;
+    margin: 30px auto;
+    box-sizing: content-box;
+}
+.infinity::before,
+.infinity::after{
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 20px solid blue;
+    border-radius: 50px 50px 0 50px;
+    transform: rotate(-45deg);
+}
+.infinity:after{
+    left: auto;
+    right: 0;
+    border-radius: 50px 50px 50px 0;
+    transform: rotate(45deg);
+}
+
+.talk-bubble{
+    margin: 30px auto;
+    width: 120px;
+    height: 80px;
+    background: rgba(0, 255, 0, 0.7);
+    position: relative;
+    border-radius: 10px;
+}
+.talk-bubble::before{
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 26px;
+    width: 0; 
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid rgba(0, 255, 0, 0.7);
+    border-bottom: 13px solid transparent;
+}
+
+.magnifying-glass{
+    margin: 30px auto;
+    font-size: 8em;
+    display: inline-block;
+    width: 0.4em;
+    box-sizing: content-box;
+    height: 0.4em;
+    border: 0.1em solid cyan;
+    position: relative;
+    border-radius: 0.35em;
+}
+
+.magnifying-glass::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -0.25em;
+    bottom: -0.1em;
+    border-width: 0;
+    background: cyan;
+    width: 0.35em;
+    height: 0.08em;
+    transform:rotate(45deg);
+}
+
+
+
+
+
 
 
 
@@ -271,11 +434,17 @@ hr{
 
 @media (max-width: 350px) {
     .container{
-        margin: 0px;
-        padding: 0px
+        margin: 5px;
+        padding: 5px
     }
     .shapes{
         background-color: #3D486C;
+    }
+    h1{
+        font-size: 29px
+    }
+    h3{
+        font-size: 25px;
     }
 }
 
