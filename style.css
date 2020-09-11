@@ -269,12 +269,15 @@ hr{
 
 
 
-
-
-
-@media (max-width: 425px){
-  
+@media (max-width: 425) {
+    .container{
+        margin: 0px;
+        padding: 0px
+    }
 }
+
+
+
 
 
 
